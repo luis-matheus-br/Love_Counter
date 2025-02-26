@@ -1,0 +1,27 @@
+/* h1{color: green;font-size:30px;font-family: cursive}
+h1{text-align:center;}
+
+p{color: green;font-size:15px;font-family: cursive}
+p{text-align:center;} */
+
+body {
+    font-family: cursive, sans-serif;
+    text-align: center;
+    background-color: #fdfdfd;
+    color: #3fcf07;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+img {
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#contador {
+    font-size: 1.0em;
+    margin-top: 10px;
+}

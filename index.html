@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando nosso amor</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function atualizarContador() {
+            let dataInicial = new Date(2018, 11, 1); // 1/12/2018 (mês 11 é dezembro no JavaScript)
+            let agora = new Date();
+            let diff = agora - dataInicial;
+
+            let dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            let segundos = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("contador").innerHTML = `${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+
+            setTimeout(atualizarContador, 1000);
+        }
+        window.onload = atualizarContador;
+    </script>
+</head>
+<body>
+    <h1>Contando nosso amor</h1>
+    <img src="imagem.jpeg" alt="Imagem" width="400">
+    <p id="contador"></p>
+</body>
+</html>
